@@ -1,0 +1,88 @@
+[
+  {
+    "id": "e9900ef3.6019f",
+    "type": "tab",
+    "label": "Flow 1",
+    "disabled": false,
+    "info": ""
+  },
+  {
+    "id": "ec0f7468.75e638",
+    "type": "telegram receiver",
+    "z": "e9900ef3.6019f",
+    "name": "",
+    "bot": "9ea84563.27d178",
+    "saveDataDir": "/home/pi/Desktop",
+    "filterCommands": false,
+    "x": 300,
+    "y": 240,
+    "wires": [
+      [
+        "a3d12177.e74ee"
+      ],
+      []
+    ]
+  },
+  {
+    "id": "15fa6aa6.7862e5",
+    "type": "debug",
+    "z": "e9900ef3.6019f",
+    "name": "",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 950,
+    "y": 220,
+    "wires": []
+  },
+  {
+    "id": "a3d12177.e74ee",
+    "type": "exec",
+    "z": "e9900ef3.6019f",
+    "command": "python3 /home/pi/code.py",
+    "addpay": true,
+    "append": "",
+    "useSpawn": "false",
+    "timer": "",
+    "oldrc": false,
+    "name": "",
+    "x": 660,
+    "y": 240,
+    "wires": [
+      [
+        "15fa6aa6.7862e5"
+      ],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "9ea84563.27d178",
+    "type": "telegram bot",
+    "botname": "Naman's B0T",
+    "usernames": "",
+    "chatids": "",
+    "baseapiurl": "",
+    "updatemode": "polling",
+    "pollinterval": "300",
+    "usesocks": false,
+    "sockshost": "",
+    "socksport": "6667",
+    "socksusername": "anonymous",
+    "sockspassword": "",
+    "bothost": "",
+    "botpath": "",
+    "localbotport": "8443",
+    "publicbotport": "8443",
+    "privatekey": "",
+    "certificate": "",
+    "useselfsignedcertificate": false,
+    "sslterminated": false,
+    "verboselogging": false
+  }
+]
